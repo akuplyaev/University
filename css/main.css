@@ -1,0 +1,243 @@
+#logo
+{
+    height: 250%;
+    margin-left: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+#logo2
+{
+    height: 150%;
+   
+
+}
+#tr {
+	border-radius: 0px;
+	background-color: #303030;
+        margin: auto;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        height: 100px;
+        border-color: #555555;
+        
+	
+}
+#mainmenu{
+    margin-top: 20px;
+    font-style: normal;
+font-size: 20px;
+font-family: century gothic;
+}
+.navbar-nav>li.act>a{
+  
+  border-bottom: 1px solid #a45197;
+  
+}
+
+div.tr
+{
+    height: 40px;
+    background: #555555;
+}
+
+.btn-primary#login {
+    color: #aaaaaa;
+    background-color: #555555;
+    padding: 0px;
+    padding-right: 25px;
+    border-color: #555555;
+    font-family: Century Gothic;
+    padding-top: 10px;
+}
+
+cg
+{
+   font-family: Century Gothic; 
+}
+#college{
+     
+     background:  url("/img/college.jpg") no-repeat center center fixed    ;   
+     -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     -webkit-background-size: cover;
+     margin-top: 140px;
+     height: auto;
+     max-width: 100%;
+     
+     
+}
+#loginform
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dr{
+    margin-bottom: 5px;
+    font-size: 21px;
+    font-weight: 200;
+    margin-left: 75px;
+    margin-bottom: 1px;      
+   margin-top: 0px;
+}
+.dr#rtt
+{
+    margin-bottom: 0px;
+}
+.rt{
+   margin-top:  10px;
+}
+#mainbutton{
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: white;
+    border-radius: 0px;
+}
+#mainbutton:hover{
+    color: #555555;
+    background-color: white;
+    border-color: #555555;
+    
+}
+.butt
+{
+    border-color: #FFFFFF;
+}
+#footer
+{
+        background-color: #303030;
+        margin: auto;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        height: 100px;
+        border-color: #555555;  
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+}
+header{
+  
+  
+}
+
+.modal-title
+{
+ line-height: 1;
+ font-weight: bold;
+ color: #a45197;
+ font-family: Century Gothic;
+ padding-left: 15px;
+
+}
+.modal-body {
+    position: relative;
+    padding: 30px;
+    padding-top: 2px;
+    font-family: Century Gothic;
+
+}
+.modal-body h4{
+    font-size: 15px;
+    font-family: Century Gothic; 
+}
+.modal-content
+{
+  border-radius: 20px;
+  position: absolute;
+}
+.btn-primary {
+    color: #FFF;
+    background-color: #a45197;
+    border-color: #a45197;
+    border-radius: 0px;
+    padding: 2px 50px;
+}
+.btn-primary:hover {    
+    background-color: #555555;
+    
+}
+.q-right {
+    float: initial;
+    margin-right: auto;
+    margin-top: -60px;
+    margin-left: 20px;
+    }
+.maps {
+  margin-top: 140px;
+}
+#map{
+  padding-bottom: 35px;
+}
+.contacts{
+  padding-bottom: 35px;
+}
+
+.search{
+  margin-top: 140px;
+  
+}
+#left{
+   background-color: #a45197;
+   height: 331px;
+   padding-left: 100px;
+    padding-top: 40px;
+}
+
+#right{
+   background:  url("/img/prep.jpg") no-repeat center top;
+   height: 331px;
+   -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     -webkit-background-size: cover;
+     
+}
+.item
+{
+    background-size: cover;
+    width:  100%;    
+    overflow: hidden;
+    text-align: center;
+    height: 450px !important
+    
+}
+.item img{
+ max-width:100%;
+ height:auto
+}
+.carousel-control
+{
+    width: 5%;
+}
+
+.carousel-caption.leftr
+{
+    left: 50px;
+    right: 20%;
+    padding-bottom: 200px;
+    text-align: left;
+}
+
+.leftcol{
+    background-color: #aaaaaa;
+    height: 450px;
+    padding-right: 0;
+    
+}
+leftcol img{
+    max-width: 100%;
+    height: auto;
+}
+.rightcol{
+    background-color: #009999;
+    height: 450px;
+   
+}
