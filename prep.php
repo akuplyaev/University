@@ -1,5 +1,4 @@
 <?php require_once  'layouts/header.php'; ?>
-
 	<div class="row search">
           <div class="col-lg-6" id="left"> 
              <form action="#" method="Post">
@@ -45,18 +44,16 @@ foreach ($result as $row)
    <div class="item <?php if($counter <= 1){echo " active"; } ?>">
   
      <div class="row">
-        <div class="col-lg-6 leftcol"  > 
+        <div class="col-lg-6 leftcol"  >
             <img src="/img/<?php echo $row[photo] ?>" alt=''>
             </div>
-            <div class="col-lg-6 rightcol"  > 
-            <div class='carousel-caption leftr'>
+            <div class="col-lg-6 rightcol rightr"  >
                 <h3><?php echo $row[fio] ?></h3>
                 <p><?php  echo "Должность: ". $row['dolzhn'] ?></p>
                 <p><?php  echo "Степень: ". $row['stepen'] ?></p>
                 <p><?php  echo "Звание: ". $row['zvanie'] ?></p>
                 <p><?php  echo "Образование: ". $row['obr'] ?></p>
                 <p><?php  echo "Дисциплины: ". $row['GROUP_CONCAT(subj.nazv)'] ?></p>
-                </div>
             </div>
         </div>
         </div>

@@ -1,5 +1,4 @@
- <?php require_once  'layouts/header.php'; ?>
- 
+<?php require_once  'layouts/header.php'; ?>
       <div class="jumbotron" id="college">
           <div class="container">
               <cg><h1 style="color: white;font-size: 40px" class="rt">ВЫБЕРИ СВОЮ ТРАЕКТОРИЮ</h1>

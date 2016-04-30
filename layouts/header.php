@@ -1,6 +1,8 @@
+<?php ob_start();
+session_start();?>
 <!DOCTYPE html>
 <html lang="RU-ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,17 +11,17 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>University</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	  <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <link href="jumbotron.css" rel="stylesheet">
     <link rel="stylesheet" href="/bootstrap/FortAwesome/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>
     <script src="js/modalform.js"></script>
-  </head>
+</head>
 
-  <body>
-  <div id="myModal" class="modal fade">
+<body>
+<div id="myModal" class="modal fade">
     <div class="modal-dialog ">
         <div class="modal-content">
             <!-- Заголовок модального окна -->
@@ -31,7 +33,7 @@
             <div class="modal-body">
                 <form action="autorizate.php" method="Post">
                     <h4>Логин (номер зачетной книжки)</h4>
-                    <input type="text" size="35" name="login"required></input>
+                    <input type="text" size="35" name="login" required></input>
                     <h4>Пароль</h4>
                     <input type="password" size="35" name="password" required></input>
                     <button class="btn btn-primary q-right" type="submit">ВОЙТИ</button>
@@ -42,17 +44,18 @@
 </div>
 <header>
     <div class=" nav navbar-fixed-top">
-        <nav class="navbar navbar-inverse " role="navigation" id="tr" >
+        <nav class="navbar navbar-inverse " role="navigation" id="tr">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img  id="logo" src="img/logo.png"></a>
+                    <a class="navbar-brand" href="index.php"><img id="logo" src="img/logo.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,11 +73,24 @@
         </nav>
         <div class="tr">
             <form action="#" class="navbar-form navbar-right" id="loginform">
-                <button type="button" class="btn btn-primary" id="login" >
-                    <span class="glyphicon glyphicon-user"></span>
-                    <cg>ВОЙТИ</cg>
-                </button>
+                    <?php if(empty($_SESSION['avtorizate'])) {
+                            echo "<button type='button' class='btn btn-primary' id='login'>
+                                    <span class='glyphicon glyphicon-user'>
+                                        <cg>ВОЙТИ</cg>
+
+                                  </button>";
+                        }
+                        else
+                        {
+                            echo "<span class='glyphicon glyphicon-user'>
+                                    <cg><a href='students.php' id='nameuser'> ".$_SESSION['fio']."
+                                        </a>
+                                    </cg>
+                                   </span>";
+                        }
+                        ?>
+
             </form>
         </div>
-</div>
-		</header>
+    </div>
+</header>

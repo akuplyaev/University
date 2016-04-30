@@ -10,15 +10,28 @@ PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ,
 PDO::ATTR_ERRMODE=>TRUE      
 ));
     $db->exec('SET NAMES utf8');
-    $queryString="Select * from stud WHERE nz=".$login; 
-    $string=new PDO($queryString);
-    $string=$string->quote($queryString);  
-    $reuslt=$db->query($string);
-    $row=$reuslt->fetch();  
-    print_r($row); 
+    $queryString="Select * from stud WHERE nz= :login";
+    $result=$db->prepare($queryString);
+    $result->bindParam(':login',$login);
+    $result->execute();
+    $row=$result->fetch();
+
+    if($row==false){
+        echo 'неправильный логин';
+    }
+    elseif($row->parol!=$password){
+        echo 'неправильный пароль';
+    }
+    else{
+        $_SESSION['fio']=$row->fio;
+        $_SESSION['login']=$row->nz;
+        $_SESSION['avtorizate']=true;
+        header("Location:index.php ");
+
+    }
     
 
 }
  catch (PDOExepction $e){
-     die('Подключение не удалось: ' . $e->getMessage());
+     echo('Ошибка: ' . $e->getMessage());
 };
