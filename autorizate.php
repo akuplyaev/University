@@ -17,20 +17,20 @@ PDO::ATTR_ERRMODE=>TRUE
     $row=$result->fetch();
 
     if($row==false){
-        echo 'неправильный логин';
+        echo 'Неправильный логин или пароль';
+        exit();
     }
     elseif($row->parol!=$password){
-        echo 'неправильный пароль';
+        echo 'Неправильный пароль или пароль';
+        exit();
     }
     else{
         $_SESSION['fio']=$row->fio;
         $_SESSION['login']=$row->nz;
         $_SESSION['avtorizate']=true;
-        header("Location:index.php ");
-
+        return;
+      //  header("Location:index.php ");
     }
-    
-
 }
  catch (PDOExepction $e){
      echo('Ошибка: ' . $e->getMessage());

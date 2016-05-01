@@ -17,7 +17,7 @@ session_start();?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>
-    <script src="js/modalform.js"></script>
+    <script src="js/ajaxlogin.js"></script>
 </head>
 
 <body>
@@ -31,12 +31,13 @@ session_start();?>
             </div>
             <!-- Основное содержимое модального окна -->
             <div class="modal-body">
-                <form action="autorizate.php" method="Post">
+                <form action="#" method="Post" id="formlog">
+                    <div id="result" > </div>
                     <h4>Логин (номер зачетной книжки)</h4>
-                    <input type="text" size="35" name="login" required></input>
+                    <input type="text" size="35" name="login" id="lg" required>
                     <h4>Пароль</h4>
-                    <input type="password" size="35" name="password" required></input>
-                    <button class="btn btn-primary q-right" type="submit">ВОЙТИ</button>
+                    <input type="password" size="35" name="password" id="pswd" required>
+                    <button class="btn btn-primary q-right" type="submit" id="ajax">ВОЙТИ</button>
                 </form>
             </div>
         </div>
