@@ -26,5 +26,23 @@ $(document).ready(function(){
             $("#myModal").modal('show');
         });
     });
+    jQuery(function() {
+        $("#mainbutton").click(function () {
+            $.ajax({
+                type: 'post',
+                url: 'choice.php',
+                success: function (data) {
+                    if (data!=="") {
+                        $("#myModal").modal('show');
+                        $('#result').html(data);
+                    }
+                    else
+                    {
+                        location.href="kurs.php";
+                    }
+                },
+            });
+        });
+    });
 })
 
