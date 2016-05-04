@@ -1,9 +1,9 @@
 <?php require_once  'layouts/header.php'; ?>
 <div class="container maps">
     <div id="students">
-        <h1>Ваша информация</h1><br>
+        <h1>Информация о вас</h1><br>
         <form action="exit.php" method="post">
-            <table class="table table-bordered"
+            <table class="table table-hover "
             <thead>
             <tr>
                 <th>ФИО</th>
@@ -21,7 +21,8 @@
                     PDO::ATTR_ERRMODE => TRUE
                 ));
                 $db->exec('SET NAMES utf8');
-                $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod and stud.nz=:login";
+                $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod
+                                and stud.nz=:login";
                 $result = $db->prepare($queryString);
                 $result->bindParam(':login',$login);
                 $result->execute();
@@ -45,6 +46,9 @@
             <thbody>
             </thbody>
             </table>
+            <div class="container">
+            <h1>Список выбранных курсов</h1><br>
+            </div>
         <button type="submit" class="btn btn-primary">
            ВЫЙТИ
         </button>
