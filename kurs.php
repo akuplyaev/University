@@ -17,12 +17,13 @@
                $result->execute();
                $row=$result->fetchAll();
                foreach($row as $str) {
-                   echo "<option>" . $str->nazv . "</option>";
+                   echo '<option>' . $str->nazv . '</option>';
                 }
                }
-           catch (PDOExepction $e) {
+           catch (PDOException $e) {
                echo('Ошибка: ' . $e->getMessage());
-               }
+
+           }
            $db=null;
                ?>
            </select>

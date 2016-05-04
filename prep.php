@@ -1,18 +1,18 @@
 <?php require_once  'layouts/header.php'; ?>
 	<div class="row search">
           <div class="col-lg-6" id="left"> 
-             <form action="#" method="Post">
+             <form  method="Post" id="searchprepform">
                     <cg><h1 style="color: white;font-size: 40px" class="rt">ПОИСК ПРЕПОДАВАТЕЛЯ</h1>
                     <p style="color: white;font-size: 20px" class="dr" id="rtt">Введите фамилию и имя преподавателя</p>
                     <input type="text" size="35" name="firstname" placeholder="Фамилия" required></input>
                     <br></br>
                     <input type="text" size="35" name="name" placeholder="Имя" required></input>
                     <br></br>
-                    <button class="btn" type="submit">НАЙТИ</button></cg>
+                    <button class="btn" type="submit" id="search-prep">НАЙТИ</button></cg>
                 </form>
           </div>
-          <div class="col-lg-6" id="right"> 
-        
+          <div class="col-lg-6" id="right">
+              <h1 style="color: white;font-size: 40px" id="ressearch"></h1>
           </div>
      </div>
      <!-- Carousel

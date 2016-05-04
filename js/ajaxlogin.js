@@ -44,5 +44,20 @@ $(document).ready(function(){
             });
         });
     });
+
 })
+jQuery(function() {
+    $("#search-prep").click(function (event) {
+        event.preventDefault();
+        var msg   = $("#searchprepform").serialize();
+        $.ajax({
+            type: 'post',
+            data: msg,
+            url: 'searchprep.php',
+            success: function (data) {
+                $('#ressearch').html(data);
+            }
+        });
+    });
+});
 
