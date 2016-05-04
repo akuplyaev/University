@@ -2,9 +2,9 @@ $(document).ready(function(){
     jQuery(function() {
         $("#ajax").click(function(event){
             var msg   = $("#formlog").serialize();
-            if ($("#lg").val() !="" && $("#pswd").val()!="")
+            if ($("#lg").val() !=="" && $("#pswd").val()!=="")
             {
-                event.preventDefault();
+              event.preventDefault();
                 $.ajax({
                     type: 'post',
                     url: 'autorizate.php',
@@ -18,7 +18,7 @@ $(document).ready(function(){
                     },
                 });
             }
-            return false;
+
         });
     });
     jQuery(function() {

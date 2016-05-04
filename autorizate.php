@@ -34,4 +34,5 @@ PDO::ATTR_ERRMODE=>TRUE
 }
  catch (PDOExepction $e){
      echo('Ошибка: ' . $e->getMessage());
-};
+}
+$db=null;
