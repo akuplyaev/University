@@ -4,9 +4,9 @@
              <form  method="Post" id="searchprepform">
                     <cg><h1 style="color: white;font-size: 40px" class="rt">ПОИСК ПРЕПОДАВАТЕЛЯ</h1>
                     <p style="color: white;font-size: 20px" class="dr" id="rtt">Введите фамилию и имя преподавателя</p>
-                    <input type="text" size="35" name="firstname" placeholder="Фамилия" required></input>
+                    <input type="text" size="35" name="firstname"  id="fname" placeholder="Фамилия" required></input>
                     <br></br>
-                    <input type="text" size="35" name="name" placeholder="Имя" required></input>
+                    <input type="text" size="35" name="name" id="mname" placeholder="Имя" required></input>
                     <br></br>
                     <button class="btn" type="submit" id="search-prep">НАЙТИ</button></cg>
                 </form>

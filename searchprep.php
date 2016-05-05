@@ -19,6 +19,7 @@ try {
     if (!empty($row)) {
         foreach($row as $str) {
             echo  $str->fio ;
+            echo "<br>".$str->stepen;
         }
     }
     else{
