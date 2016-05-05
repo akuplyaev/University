@@ -1,4 +1,12 @@
-<?php require_once  'layouts/header.php'; ?>
+<?php session_start();
+if(empty($_SESSION['avtorizate'])) {
+    header("Location:404.php");
+    return false;
+}
+else{
+    require_once  'layouts/header.php';
+}
+?>
 <div class="container maps">
     <div id="students">
         <h1>Информация о вас</h1><br>

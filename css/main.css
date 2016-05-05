@@ -249,7 +249,9 @@ leftcol img{
 }
 #students{
     margin-top: 20px;
-}
+}#admin{
+     margin-top: 20px;
+ }
 #result{
     color: red;
 }

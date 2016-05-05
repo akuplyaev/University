@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 if(isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} } 
 
     if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='') { unset($password);} }
@@ -29,7 +28,7 @@ PDO::ATTR_ERRMODE=>TRUE
         $_SESSION['login']=$row->nz;
         $_SESSION['avtorizate']=true;
         return;
-      //  header("Location:index.php ");
+
     }
 }
  catch (PDOExepction $e){

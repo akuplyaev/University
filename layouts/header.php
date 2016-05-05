@@ -1,5 +1,4 @@
-<?php ob_start();
-session_start();?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="RU-ru">
 <head>
@@ -81,16 +80,14 @@ session_start();?>
 
                                   </button>";
                         }
-                        else
-                        {
+                        else{
+                            $file=$_SESSION['login']=='0'?'admin.php':'students.php';
                             echo "<span class='glyphicon glyphicon-user'>
-                                    <cg><a href='students.php' id='nameuser'> ".$_SESSION['fio']."
+                                    <cg><a href=$file id='nameuser'> ".$_SESSION['fio']."
                                         </a>
                                     </cg>
                                    </span>";
-                        }
-                        ?>
-
+                        }?>
             </form>
         </div>
     </div>
