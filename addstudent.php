@@ -18,14 +18,21 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
             <input type="text" placeholder="ФИО" name="fio" required>
         </div><br>
         <div class="input-group">
-            <label>Пол:</label>
+            <label>Пол:</label><br>
             <select name="pol">
                 <option value='1'>Мужской</option>
                 <option value='0'>Женский</option>
             </select>
         </div><br>
         <div class="input-group">
-             <input type="number" placeholder="Год поступления" name="gp" required>
+            <label>Год поступления:</label><br>
+            <select name="gp">
+                <?php
+                for($date=2011;$date<=2025;$date++){
+                echo "<option value=$date>$date</option>";
+                }
+                ?>
+            </select>
         </div><br>
         <div class="input-group">
             <label>Cпециальность:</label><br>

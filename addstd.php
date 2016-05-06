@@ -6,7 +6,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
 $nz=$_POST['nz'];
 $fio=$_POST['fio'];
 $pol=$_POST['pol'];
-$gp=$_POST['gp'];
+$gp=date($_POST['gp']);
 $password=$_POST['parol'];
 $kod=$_POST['kod'];
 try {
