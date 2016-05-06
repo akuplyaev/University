@@ -12,7 +12,7 @@ else{
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li ><a href="" id="viewstd">Просмотр студентов</a></li>
-                    <li><a href="#">Добавление студентов</a></li>
+                    <li><a href="" id="addstd">Добавление студентов</a></li>
                     <li><a href="#">Удаление студентов</a></li>
                     <li><a href="#">Изменение пароля студента</a></li>
                 </ul>

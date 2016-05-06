@@ -31,7 +31,7 @@ try {
         PDO::ATTR_ERRMODE=>TRUE
     ));
     $db->exec('SET NAMES utf8');
-    $queryString="Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod";
+    $queryString="Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod GROUP BY stud.nz";
     $result=$db->prepare($queryString);
     $result->execute();
     $row=$result->fetchAll();

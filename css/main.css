@@ -264,3 +264,6 @@ leftcol img{
 #result{
     color: red;
 }
+.cent{
+    margin: 0 auto;
+}

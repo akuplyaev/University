@@ -86,6 +86,20 @@ $(document).ready(function(){
         });
 
     })
+    jQuery(function (){
+        $("#addstd").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'addstudent.php',
+                success:function(data){
+                    $('#queryresult').html(data);
+
+                }
+            });
+        });
+
+    })
 });
 
 
