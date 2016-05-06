@@ -11,7 +11,7 @@
     <title>University</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="/bootstrap/FortAwesome/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>

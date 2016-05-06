@@ -71,6 +71,20 @@ $(document).ready(function(){
                     }
                 });
         });
+    });
+    jQuery(function (){
+        $("#viewstd").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'viewstudents.php',
+                success:function(data){
+                    $('#queryresult').html(data);
+
+                }
+            });
+        });
+
     })
 });
 
