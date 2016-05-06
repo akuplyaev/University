@@ -1,3 +1,9 @@
+<?php session_start();
+if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
+    header("Location:404.php");
+    return false;
+}
+?>
 <h2 style="
     text-align: center;
     margin-top: 10px;

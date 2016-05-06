@@ -18,7 +18,10 @@ else{
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="queryresult">
-                    <h2>Выберите действие</h2>
+                    <h2 style="
+                        text-align: center;
+                        margin-top: 10px;
+                        margin-bottom: 20px;">Выберите действие</h2>
             </div>
         </div>
     </div>
