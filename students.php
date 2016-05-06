@@ -10,7 +10,6 @@ else{
 <div class="container maps">
     <div id="students">
         <h1>Информация о вас</h1><br>
-        <form action="exit.php" method="post">
             <table class="table table-hover "
             <thead>
             <tr>
@@ -57,10 +56,6 @@ else{
             <div class="container">
             <h1>Список выбранных курсов</h1><br>
             </div>
-        <button type="submit" class="btn btn-primary">
-           ВЫЙТИ
-        </button>
-        </form>
     </div>
 
 </div>

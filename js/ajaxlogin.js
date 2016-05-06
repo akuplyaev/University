@@ -59,6 +59,18 @@ $(document).ready(function(){
                 });
             }
         });
+    });
+    jQuery(function() {
+        $("#exitbtn").click(function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'exit.php',
+                    success:function(){
+                        window.location.href="index.php";
+                        return true;
+                    }
+                });
+        });
     })
 });
 

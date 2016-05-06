@@ -31,11 +31,7 @@ else{
             </div>
         </div>
         <div id="admin">
-            <form action="exit.php" method="post">
-                <button type="submit" class="btn btn-primary">
-                    ВЫЙТИ
-                </button>
-            </form>
+           
         </div>
     </div>
 <?php require_once  'layouts/footer.php'; ?>

@@ -86,7 +86,9 @@
                                     <cg><a href=$file id='nameuser'> ".$_SESSION['fio']."
                                         </a>
                                     </cg>
-                                   </span>";
+                                   </span>
+                                   <span class='glyphicon glyphicon-log-out'></span>
+                                   <button type='button' class='btn btn-primary' id='exitbtn'>Выйти</button>";
                         }?>
             </form>
         </div>

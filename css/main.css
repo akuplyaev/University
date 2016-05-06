@@ -52,6 +52,15 @@ div.tr
     font-family: Century Gothic;
     
 }
+.btn-primary#exitbtn {
+    color: #aaaaaa;
+    background-color: #555555;
+    padding: 0px;
+    padding-right: 25px;
+    border-color: #555555;
+    font-family: Century Gothic;
+
+}
 
 cg
 {
