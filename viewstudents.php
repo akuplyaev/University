@@ -39,7 +39,7 @@ try {
             echo "<tr>";
             echo "<td>".$str->nz."</td>";
             echo "<td>".$str->fio."</td>";
-            echo "<td>".($row->pol==1?'мужской':'женский')."</td>";
+            echo "<td>".($str->pol==1?'мужской':'женский')."</td>";
             echo "<td>".$str->gp."</td>";
             echo "<td>".$str->kod."</td>";
             echo "<td>".$str->parol."</td>";
