@@ -18,7 +18,6 @@ $(document).ready(function(){
                     },
                 });
             }
-
         });
     });
     jQuery(function() {
@@ -112,13 +111,14 @@ $(document).ready(function(){
         });
     });
     jQuery(function (){
-        $("#change_psw").click(function (e) {
+        $("#delete_students_form").click(function (e) {
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'change_psw.php',
+                url: 'delete_students_form.php',
                 success:function(data){
                     $('#queryresult').html(data);
+
                 }
             });
         });

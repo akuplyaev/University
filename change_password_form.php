@@ -9,7 +9,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     margin-top: 10px;
     margin-bottom: 20px;
 ">Изменение пароля</h2>
-<form action="">
+<form id="frm_chg_psw">
     <div class="input-group">
         <label>Выбрать студента:</label><br>
         <select name="kod">
@@ -36,9 +36,10 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
         </select>
     </div><br>
     <div class="input-group">
-        <input type="text" placeholder="Пароль" name="password" required>
+        <input type="text" placeholder="Пароль" name="password" id="psw_chg_input" required>
     </div><br>
     <div class="input-group">
-        <input type="submit" value="Изменить" id="change_psw">
+        <script src="/js/change_password_ajax.js"></script>
+        <button  id="change_psw">Изменить</button>
     </div>
 </form>

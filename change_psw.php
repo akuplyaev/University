@@ -4,7 +4,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     return false;
 }
 if ($_POST['kod']=="0"){
-    echo "нет соответствующих прав для изменения пароля админа";
+    echo "<h2 style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>Нет соответствующих прав для изменения пароля админа</h2>";
     return false;
 }
 $nz=$_POST['kod'];
@@ -21,7 +21,7 @@ try {
         ':nz'=>$nz,
         ':password'=>$password
     ));
-    echo "Пароль изменен";
+    echo "<h2 style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>Пароль изменен</h2>";
 }
 catch (PDOExepction $e){
     echo('Ошибка: ' . $e->getMessage());
