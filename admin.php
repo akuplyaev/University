@@ -11,10 +11,10 @@ else{
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li ><a href="" id="viewstd">Просмотр студентов</a></li>
-                    <li><a href="" id="addstd">Добавление студентов</a></li>
-                    <li><a href="#">Удаление студентов</a></li>
-                    <li><a href="#">Изменение пароля студента</a></li>
+                    <li ><a href="" id="view_students_form">Просмотр студентов</a></li>
+                    <li><a href="" id="add_students_form">Добавление студентов</a></li>
+                    <li><a href="" id="delete_students_form">Удаление студентов</a></li>
+                    <li><a href="" id="change_password_form">Изменение пароля студента</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="queryresult">

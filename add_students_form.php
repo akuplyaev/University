@@ -10,7 +10,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     margin-bottom: 20px;
 ">Добавление студента</h2>
 
-    <form action="addstd.php" method="post" class="" >
+    <form action="add_std.php" method="post" class="" >
         <div class="input-group">
             <input type="number" placeholder="Номер зачетки" name="nz" required>
         </div><br>
@@ -44,8 +44,8 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
                         PDO::ATTR_ERRMODE=>TRUE
                     ));
                     $db->exec('SET NAMES utf8');
-                    $querystring="Select nazv,kod from prof";
-                    $res=$db->prepare($querystring);
+                    $queryString="Select nazv,kod from prof";
+                    $res=$db->prepare($queryString);
                     $res->execute();
                     $row=$res->fetchAll();
                     foreach($row as $str){

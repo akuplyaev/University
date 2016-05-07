@@ -73,33 +73,56 @@ $(document).ready(function(){
         });
     });
     jQuery(function (){
-        $("#viewstd").click(function (e) {
+        $("#view_students_form").click(function (e) {
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'viewstudents.php',
+                url: 'view_students_form.php',
                 success:function(data){
                     $('#queryresult').html(data);
 
                 }
             });
         });
-
-    })
+    });
     jQuery(function (){
-        $("#addstd").click(function (e) {
+        $("#add_students_form").click(function (e) {
             e.preventDefault();
             $.ajax({
                 type: 'post',
-                url: 'addstudent.php',
+                url: 'add_students_form.php',
                 success:function(data){
                     $('#queryresult').html(data);
 
                 }
             });
         });
+    });
+    jQuery(function (){
+        $("#change_password_form").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'change_password_form.php',
+                success:function(data){
+                    $('#queryresult').html(data);
 
-    })
+                }
+            });
+        });
+    });
+    jQuery(function (){
+        $("#change_psw").click(function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: 'change_psw.php',
+                success:function(data){
+                    $('#queryresult').html(data);
+                }
+            });
+        });
+    });
 });
 
 
