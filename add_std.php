@@ -10,17 +10,13 @@ $pol=$_POST['pol'];
 $gp=date($_POST['gp']);
 $password=$_POST['parol'];
 $kod=$_POST['kod'];
-try {
-    if(Students::addStudent($nz,$fio,$pol,$gp,$kod,$password)==true) {
+    if(Students::addStudent($nz,$fio,$pol,$gp,$kod,$password)) {
         header("Location:admin.php");
     }
     else{
         echo "Студент с таким номером зачетной книжки существует";
     }
-}
-catch (PDOExepction $e){
-    echo('Ошибка: ' . $e->getMessage());
-}
+
 
 
 
