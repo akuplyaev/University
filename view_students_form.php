@@ -5,11 +5,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     return false;
 }
 ?>
-<h2 style="
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-">Информация о студентах</h2>
+<h2>Информация о студентах</h2>
 <table class="table table-striped"
     <thead>
         <tr>
@@ -26,7 +22,6 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     </thead>
         <thbody>
 <?php
-try {
     $row=Students::getAllStudentsInfo();
     foreach ($row as $str) {
         echo "<tr>";
@@ -41,10 +36,6 @@ try {
         echo "<td>" . $str->kolze . "</td>";
         echo "</tr>";
     }
-}
-catch (PDOExepction $e){
-    echo('Ошибка: ' . $e->getMessage());
-}
 ?>
 
         </thbody>
