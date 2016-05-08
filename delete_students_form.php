@@ -1,4 +1,5 @@
 <?php session_start();
+require_once 'classes/Students.php';
 if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     header("Location:404.php");
     return false;
@@ -19,27 +20,14 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
 </thead>
 <thbody>
     <?php
-    try {
-        $db=new PDO("mysql:dbname=diplom;host=localhost","root","",array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8",
-            PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ,
-            PDO::ATTR_ERRMODE=>TRUE
-        ));
-        $db->exec('SET NAMES utf8');
-        $queryString="Select nz,fio from stud WHERE nz!=0 GROUP by fio";
-        $result=$db->prepare($queryString);
-        $result->execute();
-        $row=$result->fetchAll();
+        $row=Students::getStudentsNotAdmin();
         foreach($row as $str){
             echo "<tr>";
             echo "<td>".$str->fio."</td>";
             echo "<td><input type='checkbox' name='chk$str->nz' value='$str->nz'></td>";
             echo "</tr>";
         }
-    }
-    catch (PDOExepction $e){
-        echo('Ошибка: ' . $e->getMessage());
-    }
-    $db=null;
+
     ?>
 </thbody>
 </table>

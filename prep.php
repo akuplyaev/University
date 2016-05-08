@@ -20,23 +20,9 @@
     <div  id="carousel" class="carousel" data-ride="carousel">
     
     <div class="carousel carousel-inner">
-<?php 
-  $db=new PDO("mysql:dbname=diplom;host=localhost","root","",array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8",
-    PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC,
-    PDO::ATTR_ERRMODE=>TRUE      
-    ));
-$query="select prep.fio,prep.dolzhn,prep.stepen,prep.zvanie,prep.obr,prep.photo,subj.nazv,
-    GROUP_CONCAT(subj.nazv)
-    
-         FROM
-  prep
-  INNER JOIN 
-  ssp
-    ON prep.id_prep = ssp.id_prep
-  LEFT JOIN subj
-    ON ssp.id_subj = subj.id_subj
-    GROUP BY prep.fio";
-$result=$db->query($query)->fetchAll(PDO::FETCH_ASSOC);
+<?php
+require_once 'classes/Professors.php';
+$result=Professors::getAllProfessorsInfo();
 $counter=1;
 foreach ($result as $row)
 {

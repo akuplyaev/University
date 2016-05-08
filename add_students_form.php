@@ -1,4 +1,5 @@
 <?php session_start();
+require_once 'classes/Speciality.php';
 if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     header("Location:404.php");
     return false;
@@ -30,7 +31,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
                 <?php
                 for($date=2011;$date<=2025;$date++){
                 echo "<option value=$date>$date</option>";
-                }
+                };
                 ?>
             </select>
         </div><br>
@@ -38,25 +39,11 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
             <label>Cпециальность:</label><br>
             <select name="kod">
                 <?php
-                try {
-                    $db=new PDO("mysql:dbname=diplom;host=localhost","root","",array(PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES utf8",
-                        PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ,
-                        PDO::ATTR_ERRMODE=>TRUE
-                    ));
-                    $db->exec('SET NAMES utf8');
-                    $queryString="Select nazv,kod from prof";
-                    $res=$db->prepare($queryString);
-                    $res->execute();
-                    $row=$res->fetchAll();
-                    foreach($row as $str){
-                        echo "<option value=$str->kod>".$str->nazv."</option>";
+                    $row=Speciality::getSpecialityInfo();
+                    foreach($row as $str) {
+                        echo "<option value=$str->kod>" . $str->nazv . "</option>";
                     }
-                }
-                catch (PDOExepction $e){
-                    echo('Ошибка: ' . $e->getMessage());
-                }
-                $db=null;
-
+                    $db=null;
                 ?>
             </select>
         </div><br>

@@ -23,10 +23,8 @@ else{
             <?
              $login=$_SESSION['login'];
             try {
-                $db = new PDO("mysql:dbname=diplom;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
-                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-                    PDO::ATTR_ERRMODE => TRUE
-                ));
+                require_once 'classes/Db.php';
+                $db=Db::getConnection();
                 $db->exec('SET NAMES utf8');
                 $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod
                                 and stud.nz=:login";
