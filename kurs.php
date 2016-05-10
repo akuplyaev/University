@@ -1,5 +1,5 @@
 <?php require_once  'layouts/header.php';
-    require_once 'classes/Autoload.php';?>
+    require_once 'config/Autoload.php';?>
     <div class="container maps" xmlns="http://www.w3.org/1999/html">
         <h1>Список предметов для выбора</h1>
        <form action="select.php" method="post">

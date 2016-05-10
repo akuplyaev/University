@@ -5,7 +5,7 @@ if(empty($_SESSION['avtorizate'])) {
 }
 else{
     require_once  'layouts/header.php';
-    require_once 'classes/Autoload.php';
+    require_once 'config/Autoload.php';
 }
 ?>
 <div class="container maps">

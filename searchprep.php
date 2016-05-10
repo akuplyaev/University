@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/Autoload.php';
+require_once 'config/Autoload.php';
 if(empty($_POST['firstname']) || empty($_POST['name']))
 {
     return false;
