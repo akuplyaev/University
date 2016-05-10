@@ -23,7 +23,7 @@ else{
             </tr>
             <?
              $login=$_SESSION['login'];
-            $row=Students::getAllStudentInfo($login);
+            $row=Students::getStudentAllInfo($login);
                     echo "<tr>";
                     echo"<td>".$row->fio."</td>";
                     echo"<td>".($row->pol==1?'мужской':'женский')."</td>";

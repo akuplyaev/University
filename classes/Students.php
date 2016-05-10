@@ -1,7 +1,7 @@
 <?php
 
     class Students{
-        public static function getAllStudentsInfo(){
+        public static function getStudentsAllInfo(){
             $db = Db::getConnection();
             $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod GROUP BY stud.nz";
             $result = $db->prepare($queryString);
@@ -10,7 +10,7 @@
             $db=null;
             return $row;
         }
-        public static function getAllStudentInfo($login){
+        public static function getStudentAllInfo($login){
             $db=Db::getConnection();
             $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod
                                 and stud.nz=:login";

@@ -22,7 +22,7 @@ if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     </thead>
         <thbody>
 <?php
-    $row=Students::getAllStudentsInfo();
+    $row=Students::getStudentsAllInfo();
     foreach ($row as $str) {
         echo "<tr>";
         echo "<td>" . $str->nz . "</td>";
