@@ -1,5 +1,5 @@
 <?php session_start();
-require_once 'classes/Students.php';
+require_once 'classes/Autoload.php';
 if(empty($_SESSION['avtorizate']) || $_SESSION['login']!='0') {
     header("Location:404.php");
     return false;

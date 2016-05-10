@@ -1,7 +1,6 @@
 <?php
-require_once 'Db.php';
-    class Students
-    {
+
+    class Students{
         public static function getAllStudentsInfo(){
             $db = Db::getConnection();
             $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod GROUP BY stud.nz";
@@ -10,6 +9,16 @@ require_once 'Db.php';
             $row = $result->fetchAll();
             $db=null;
             return $row;
+        }
+        public static function getAllStudentInfo($login){
+            $db=Db::getConnection();
+            $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod
+                                and stud.nz=:login";
+            $result = $db->prepare($queryString);
+            $result->bindParam(':login',$login);
+            $result->execute();
+            $db=null;
+            return $result->fetch();
         }
         public static function addStudent($nz, $fio, $pol, $gp, $kod, $password){
         $db = Db::getConnection();

@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/Professors.php';
+require_once 'classes/Autoload.php';
 if(empty($_POST['firstname']) || empty($_POST['name']))
 {
     return false;

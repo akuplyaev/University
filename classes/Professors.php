@@ -1,7 +1,5 @@
 <?php
-require_once 'Db.php';
-class Professors
-{
+class Professors{
  static function getAllProfessorsInfo(){
      $db=Db::getConnection();
      $query="select prep.fio,prep.dolzhn,prep.stepen,prep.zvanie,prep.obr,prep.photo,subj.nazv,

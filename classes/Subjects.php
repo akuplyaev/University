@@ -1,7 +1,5 @@
 <?php
-require_once 'Db.php';
-class Subjects
-{
+class Subjects{
     static public function getSubjects(){
         $db=Db::getConnection();
         $queryString = "Select * from subj WHERE predyd";

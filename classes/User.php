@@ -1,5 +1,4 @@
 <?php
-require_once 'Db.php';
 class User{
     public $login;
     private $password;

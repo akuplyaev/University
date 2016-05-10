@@ -21,7 +21,7 @@
     
     <div class="carousel carousel-inner">
 <?php
-require_once 'classes/Professors.php';
+require_once 'classes/Autoload.php';
 $result=Professors::getAllProfessorsInfo();
 $counter=1;
 foreach ($result as $row)

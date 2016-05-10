@@ -1,6 +1,5 @@
 <?php
-    class Db
-    {
+    class Db{
         static public function getConnection()
         {
             $db = new PDO("mysql:dbname=diplom;host=localhost", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",

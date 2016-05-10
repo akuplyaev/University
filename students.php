@@ -5,6 +5,7 @@ if(empty($_SESSION['avtorizate'])) {
 }
 else{
     require_once  'layouts/header.php';
+    require_once 'classes/Autoload.php';
 }
 ?>
 <div class="container maps">
@@ -22,16 +23,7 @@ else{
             </tr>
             <?
              $login=$_SESSION['login'];
-            try {
-                require_once 'classes/Db.php';
-                $db=Db::getConnection();
-                $db->exec('SET NAMES utf8');
-                $queryString = "Select * from stud INNER JOIN prof WHERE stud.kod=prof.kod
-                                and stud.nz=:login";
-                $result = $db->prepare($queryString);
-                $result->bindParam(':login',$login);
-                $result->execute();
-                while( $row = $result->fetch()){
+            $row=Students::getAllStudentInfo($login);
                     echo "<tr>";
                     echo"<td>".$row->fio."</td>";
                     echo"<td>".($row->pol==1?'мужской':'женский')."</td>";
@@ -40,12 +32,6 @@ else{
                     echo"<td>".$row->nazv."</td>";
                     echo"<td>".$row->srok."</td>";
                     echo "</tr>";
-                }
-            }
-            catch (PDOExepction $e) {
-                echo('Ошибка: ' . $e->getMessage());
-            }
-            $db=null;
             ?>
             </thead>
             <thbody>
