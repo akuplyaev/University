@@ -36,7 +36,7 @@ require_once 'Db.php';
                 return false;
             }
         }
-        public static function authorization($login,$password){
+       /* public static function authorization($login,$password){
 
             $db = Db::getConnection();
             $queryString="Select * from stud WHERE nz= :login";
@@ -59,7 +59,7 @@ require_once 'Db.php';
                 $_SESSION['avtorizate']=true;
                 return;
             }
-        }
+        } */
         public static function getStudentsNotAdmin(){
 
             $db = Db::getConnection();
