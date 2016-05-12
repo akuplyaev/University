@@ -17,6 +17,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>
     <script src="js/ajaxlogin.js"></script>
+    <script src="js/select_ajax.js"></script>
 </head>
 
 <body>

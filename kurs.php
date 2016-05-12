@@ -5,15 +5,18 @@
        <form action="select.php" method="post">
            <div class="row">
                <div class="col-lg-3">
-           <select class="form-control input-sm">
+           <select class="form-control input-sm" id="subj">
            <?
                $row=Subjects::getSubjects();
                foreach($row as $str) {
-                   echo '<option>' . $str->nazv . '</option>';
+                   echo "<option value='$str->id_subj'>". $str->nazv . '</option>';
                 }
                ?>
            </select>
                    <br>
+               </div>
+               <div class="col-lg-3" id="professors">
+
                </div>
            </div>
            <button type="submit" class="btn btn-primary">
