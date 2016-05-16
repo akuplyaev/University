@@ -5,7 +5,7 @@
        <form action="select.php" method="post">
            <div class="row">
                <div class="col-lg-3">
-           <select class="form-control input-sm" id="subj">
+           <select class="form-control input-sm" id="subj" name="id_subject">
            <?
                $row=Subjects::getSubjects();
                foreach($row as $str) {

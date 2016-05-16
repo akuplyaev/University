@@ -39,7 +39,7 @@ class Professors
     static function getProfessor($id_subj)
     {
         $db = Db::getConnection();
-        $queryString = "Select prep.fio FROM prep  INNER JOIN
+        $queryString = "Select * FROM prep  INNER JOIN
                         ssp
                         ON prep.id_prep = ssp.id_prep
                         LEFT JOIN subj
