@@ -51,4 +51,18 @@ class Professors
         $db = null;
         return $row;
     }
+    static function addSssp($id_prep,$id_subj,$nz){
+        $db = Db::getConnection();
+        $queryString = "Select * from ssp WHERE id_prep=:id_prep and id_subj=:id_subj";
+        $result=$db->prepare($queryString);
+        $result->execute(array(':id_prep'=>$id_prep,
+            ':id_subj'=>$id_subj));
+        $row=$result->fetch();
+        $queryString="INSERT INTO sssp (id_ssp,nz) VALUE (:id_ssp,:nz)";
+        $result=$db->prepare($queryString);
+        $result->execute(array(':id_ssp'=>$row->id_ssp,':nz'=>$nz));
+        return true;
+
+    }
+
 }

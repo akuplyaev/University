@@ -39,6 +39,25 @@ else{
             </table>
             <div class="container">
             <h1>Список выбранных курсов</h1><br>
+                <table class="table table-bordered "
+                <thead>
+                <tr>
+                    <th>Название предмета</th>
+                    <th>Преподаватель</th>
+                <?
+                $row=Subjects::getKursInfo($login);
+                foreach($row as $row) {
+                    echo "<tr>";
+                    echo "<td> $row->nazv</td>";
+                    echo "<td> $row->fio</td>";
+                    echo "</tr>";
+                }
+                ?>
+                </thead>
+                <thbody>
+                </thbody>
+                </table>
+                <a href="kurs.php">Добавить</a>
             </div>
     </div>
 
