@@ -242,7 +242,7 @@ header{
     height: auto;
     padding-right: 0;
 }
-leftcol img{
+.leftcol img{
     max-width: 100%;
 
 }

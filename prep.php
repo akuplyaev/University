@@ -3,7 +3,7 @@
           <div class="col-lg-6" id="left"> 
              <form  method="Post" id="searchprepform">
                     <cg><h1 style="color: white;font-size: 40px" class="rt">ПОИСК ПРЕПОДАВАТЕЛЯ</h1>
-                    <p style="color: white;font-size: 20px" class="dr" id="rtt">Введите фамилию и имя преподавателя</p>
+                    <p style="color: white;margin-bottom:20px;font-size: 20px" class="dr" id="rtt">Введите фамилию и имя преподавателя</p>
                     <input type="text" size="35" name="firstname"  id="fname" placeholder="Фамилия" required></input>
                     <br></br>
                     <input type="text" size="35" name="name" id="mname" placeholder="Имя" required></input>
@@ -15,6 +15,7 @@
               <h1 style="color: white;font-size: 40px" id="ressearch"></h1>
           </div>
      </div>
+<form action="searchprep.php" method="POST"><input type="submit"></form>
      <!-- Carousel
     ================================================== -->
     <div  id="carousel" class="carousel" data-ride="carousel">
@@ -28,18 +29,17 @@ foreach ($result as $row)
 {
     ?>
    <div class="item <?php if($counter <= 1){echo " active"; } ?>">
-  
      <div class="row">
         <div class="col-lg-6 leftcol"  >
             <img src="/img/<?php echo $row[photo] ?>" alt=''>
             </div>
             <div class="col-lg-6 rightcol rightr"  >
-                <h3><?php echo $row[fio] ?></h3>
+                <cg><h3><?php echo $row[fio] ?></h3>
                 <p><?php  echo "Должность: ". $row['dolzhn'] ?></p>
                 <p><?php  echo "Степень: ". $row['stepen'] ?></p>
-                <p><?php  echo "Звание: ". $row['zvanie'] ?></p>
+                <p><?php  echo "Звание: ". $zv=($row['zvanie']!="")?$row['zvanie']:"Нет" ?></p>
                 <p><?php  echo "Образование: ". $row['obr'] ?></p>
-                <p><?php  echo "Дисциплины: ". $row['GROUP_CONCAT(subj.nazv)'] ?></p>
+                <p><?php  echo "Дисциплины: ". $row['GROUP_CONCAT(subj.nazv)'] ?></p></cg>
             </div>
         </div>
         </div>

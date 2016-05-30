@@ -1,20 +1,10 @@
 <?php
 class Subjects{
-    static public function getSubjects($nz){
+    static public function getSubjects(){
         $db=Db::getConnection();
-        $rs=self::getKursInfo($nz);
-        foreach ($rs as $tr){
-            $v[]=$tr->id_subj;
-        }
-        $tr=implode($v,',' );
-        $qr=" Select * from stud WHERE nz=:nz";
-        $result = $db->prepare($qr);
-        $result->execute(array(':nz'=>$nz));
-        $row=$result->fetch();
-        $kod=$row->kod;
-        $queryString = "Select * from subj INNER JOIN sp ON subj.id_subj=sp.id_subj WHERE sp.kod=:kod NOT in ($tr)";
+        $queryString = "Select * from subj WHERE predyd=0";
         $result = $db->prepare($queryString);
-        $result->execute(array(':kod'=>$kod));
+        $result->execute();
         $row=$result->fetchAll();
         $db=null;
         return $row;
