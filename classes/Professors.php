@@ -57,12 +57,18 @@ class Professors
         $result=$db->prepare($queryString);
         $result->execute(array(':id_prep'=>$id_prep,
             ':id_subj'=>$id_subj));
-        $row=$result->fetch();
-        $queryString="INSERT INTO sssp (id_ssp,nz) VALUE (:id_ssp,:nz)";
-        $result=$db->prepare($queryString);
-        $result->execute(array(':id_ssp'=>$row->id_ssp,':nz'=>$nz));
-        return true;
-
+        $ze=Subjects::getCountZE($nz);
+        $col=Students::getStudentAllInfo($nz);
+        if ($ze->COl>$col->kolze){
+            return false;
+        }
+        else {
+            $row=$result->fetch();
+            $queryString="INSERT INTO sssp (id_ssp,nz) VALUE (:id_ssp,:nz)";
+            $result=$db->prepare($queryString);
+            $result->execute(array(':id_ssp'=>$row->id_ssp,':nz'=>$nz));
+            return true;
+        }
     }
 
 }

@@ -23,4 +23,16 @@ class Subjects{
         $db=null;
         return $row;
     }
+
+    public static function getCountZE($nz){
+        $db=Db::getConnection();
+        $queryString="Select SUM(subj.kolze) AS COl from sssp INNER JOIN ssp ON sssp.id_ssp=ssp.id_ssp INNER JOIN subj
+                      ON ssp.id_subj=subj.id_subj
+                      WHERE  sssp.nz=:nz";
+        $result = $db->prepare($queryString);
+        $result->execute(array(':nz'=>$nz));
+        $row=$result->fetch();
+        $db=null;
+        return $row;
+    }
 }

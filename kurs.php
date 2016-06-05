@@ -11,6 +11,7 @@ require_once  'layouts/header.php';
                $row=Subjects::getSubjects($_SESSION['login']);
                foreach($row as $str) {
                    echo "<option value='$str->id_subj'>". $str->nazv . '</option>';
+
                 }
                ?>
            </select>
