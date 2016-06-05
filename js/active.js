@@ -1,4 +1,4 @@
-jQuery(document).ready(function($)
+
     { var url = window.location.pathname;
        var page=url.substr(url.lastIndexOf("/")+1);
         if (page==""){
