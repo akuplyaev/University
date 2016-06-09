@@ -10,6 +10,7 @@ $pol=$_POST['pol'];
 $gp=date($_POST['gp']);
 $password=$_POST['parol'];
 $kod=$_POST['kod'];
+//$password=password_hash($password, PASSWORD_DEFAULT);
     if(Students::addStudent($nz,$fio,$pol,$gp,$kod,$password)) {
         header("Location:admin.php");
     }
