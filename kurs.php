@@ -8,9 +8,10 @@ require_once  'layouts/header.php';
                <div class="col-lg-3">
            <select class="form-control input-sm" id="subj" name="id_subject">
            <?
-               $row=Subjects::getSubjects();
+               $row=Subjects::getSubjects($_SESSION['login']);
                foreach($row as $str) {
                    echo "<option value='$str->id_subj'>". $str->nazv . '</option>';
+
                 }
                ?>
            </select>

@@ -15,7 +15,7 @@
               <h1 style="color: white;font-size: 40px" id="ressearch"></h1>
           </div>
      </div>
- 
+<form action="searchprep.php" method="POST"></form>
      <!-- Carousel
     ================================================== -->
     <div  id="carousel" class="carousel" data-ride="carousel">

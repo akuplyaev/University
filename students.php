@@ -44,12 +44,14 @@ else{
                 <tr>
                     <th>Название предмета</th>
                     <th>Преподаватель</th>
+                    <th>Колличество зачетных единиц</th>
                 <?
                 $row=Subjects::getKursInfo($login);
                 foreach($row as $row) {
                     echo "<tr>";
                     echo "<td> $row->nazv</td>";
                     echo "<td> $row->fio</td>";
+                    echo "<td> $row->kolze</td>";
                     echo "</tr>";
                 }
                 ?>
@@ -57,7 +59,17 @@ else{
                 <thbody>
                 </thbody>
                 </table>
-                <a href="kurs.php">Добавить</a>
+                <a href="kurs.php">Добавить дисциплину</a><br>
+                <br>
+                <?php $ze=Subjects::getCountZE($login);
+                      $col=Students::getStudentAllInfo($login);
+                if ($ze->COl>$col->kolze){
+                 echo "<p>Вы превысили общее количество часов в курсе</p>";
+                }
+                else {
+                    echo "<p>Количество часов:" . $ze->COl . " из " . $col->kolze . "</p>";
+                }
+                ?>
             </div>
     </div>
 

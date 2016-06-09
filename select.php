@@ -8,5 +8,6 @@ if (Professors::addSssp($id_prep,$id_subject,$_SESSION['login'])){
     header("Location:students.php");
 }
 else{
-    echo "error";
+    echo "Вы превысили количество часов";
+
 }
