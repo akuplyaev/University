@@ -10,6 +10,7 @@ if ($_POST['kod']=="0"){
 }
 $nz=$_POST['kod'];
 $password=$_POST['password'];
+$password=password_hash($password, PASSWORD_DEFAULT);
 
     if (Students::changePasswordStudents($nz,$password)) {
         echo "<h2 style='text-align: center; margin-top: 10px; margin-bottom: 20px;'>Пароль изменен</h2>";

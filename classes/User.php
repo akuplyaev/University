@@ -13,8 +13,8 @@ class User{
         $result->bindParam(':login',$this->login);
         $result->execute();
         $row=$result->fetch();
-        $db=null;
-        if($row==false || $row->parol!=$this->password ){
+        $db=null;       
+        if($row==false || password_verify($this->password,$row->parol)){
             return false;
         }
         else{
