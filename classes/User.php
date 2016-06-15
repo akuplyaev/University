@@ -12,9 +12,9 @@ class User{
         $result=$db->prepare($queryString);
         $result->bindParam(':login',$this->login);
         $result->execute();
-        $row=$result->fetch();
+        $row=$result->fetch();       
         $db=null;       
-        if($row==false || password_verify($this->password,$row->parol)){
+        if($row==false || password_verify($this->password, $row->parol)==false){
             return false;
         }
         else{
